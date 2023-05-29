@@ -14,6 +14,8 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
   // Store the form data in the browser's local storage
   localStorage.setItem('formData', JSON.stringify(formData));
 
-  // Optionally, you can redirect the user to a thank you page
-  window.location.href = 'thank_you.html';
+  // Display a confirmation message
+  var confirmationMsg = document.createElement('p');
+  confirmationMsg.textContent = 'Thank you for submitting the form!';
+  document.body.appendChild(confirmationMsg);
 });
